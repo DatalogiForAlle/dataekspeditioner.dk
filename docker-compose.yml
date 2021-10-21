@@ -11,7 +11,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     networks:
-      - reverseproxy-proxynet
+      - reverseproxy_proxynet
 
   wordpress:
     image: wordpress:latest
@@ -36,7 +36,7 @@ services:
         target: /usr/local/etc/php/conf.d/increase_php_upload_limits.ini
       - wordpress_files:/var/www/html
     networks:
-      - reverseproxy-proxynet
+      - reverseproxy_proxynet
 
   backup:
     image: aveltens/wordpress-backup
@@ -54,12 +54,12 @@ services:
       - "MYSQL_PORT_3306_TCP_PORT=3306"
       - "CLEANUP_OLDER_THAN=30"
     networks:
-      - reverseproxy-proxynet
+      - reverseproxy_proxynet
 
 volumes:
     db_data: {}
     wordpress_files: {}
 
 networks:
-  reverseproxy-proxynet:
+  reverseproxy_proxynet:
     external: true
