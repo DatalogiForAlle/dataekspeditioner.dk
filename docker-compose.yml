@@ -61,5 +61,5 @@ volumes:
     wordpress_files: {}
 
 networks:
-  nginx_nginx-proxynet:
+  reverseproxy-proxynet:
     external: true
