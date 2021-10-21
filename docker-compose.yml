@@ -39,7 +39,7 @@ services:
       - nginx_nginx-proxynet
 
   backup:
-    image: dybber/wordpress-backup
+    image: aveltens/wordpress-backup
     restart: always
     depends_on:
       - db
