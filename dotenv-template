@@ -1,0 +1,4 @@
+MYSQL_ROOT_PASSWORD=<<<<database root password>>>>
+WORDPRESS_DB_NAME=<<<wordpress database name>>>
+WORDPRESS_DB_USER=<<<wordpress database username>>>
+WORDPRESS_DB_PASSWORD=<<<wordpress database password>>>
